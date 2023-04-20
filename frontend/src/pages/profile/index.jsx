@@ -1,6 +1,6 @@
 import Layout from "@/components/layout";
 import styles from "../profile/styles.module.css";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import editIcon from "../../assets/edit-icon.svg";
 import coinIcon from "../../assets/coin-icon.svg";
 import hammerIcon from "../../assets/hammer-icon.svg";
@@ -8,9 +8,13 @@ import wandIcon from "../../assets/magic-wand-icon.svg";
 import Image from "next/image";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { logoutAuth } from "@/features/auth/authSlice";
+import { useRouter } from "next/router";
 
 const Profile = () => {
   const dataLogin = useSelector(state => state.auth);
+  const router = useRouter();
+  const dispatch = useDispatch();
   const [perfil, setPerfil] = useState({
     id: null,
     username: "",
@@ -34,6 +38,11 @@ const Profile = () => {
       }
     ]
   });
+
+  const handleLogout = () => {
+    dispatch(logoutAuth());
+    router.push('/');
+  }
 
   useEffect(() => {
     axios
@@ -142,7 +151,7 @@ const Profile = () => {
           <div className={styles.bottom__link}>
             <p>Cambiar Contraseña</p>
             <p>Noticias</p>
-            <p>Logout</p>
+            <p onClick={handleLogout} style={{ cursor: 'pointer' }}>Logout</p>
           </div>
         </div>
       </div>

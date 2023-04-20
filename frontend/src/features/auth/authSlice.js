@@ -21,9 +21,17 @@ export const authSlice = createSlice({
             state.profileImg = profileImg
             state.token = token
             state.session = true
+        },
+        logoutAuth: (state) => {
+      console.log('clearing data')
+            state.id = ""
+            state.username = ""
+            state.profileImg = ""
+            state.token = ""
+            state.session = false
         }
     }
 })
 
-export const { loginAuth } = authSlice.actions
+export const { loginAuth, logoutAuth } = authSlice.actions
 export default authSlice.reducer

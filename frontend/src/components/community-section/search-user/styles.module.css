@@ -1,0 +1,33 @@
+.container{
+    width: 312px;
+    height: 38px;
+    background-color: #F2F3F5;
+    border-radius: 30px;
+    border-style: none;
+    padding-left: 14px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: #000000;
+    }
+.container:focus{
+    outline: none;
+}
+.container::placeholder{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: #000000;
+}
+@media (min-width: 768px){
+    .container{
+        width: 380px;
+        border-radius: 0;
+        border-bottom: 1px black solid;
+        background-color: white;
+    }
+}

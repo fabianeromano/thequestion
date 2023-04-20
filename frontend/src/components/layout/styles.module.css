@@ -1,0 +1,32 @@
+.container{
+    height: 100vh;
+    width: 100%;
+}
+.main{
+    height: 90%;
+    width: 100%;
+    overflow: hidden;
+}
+.navbar{
+    height: 10%;
+}
+.desktopnavbar{
+    width: 100%;
+    display: none;
+}
+@media (min-width: 768px){
+    .navbar{
+        display: none;
+    }
+    .main{
+        height: 100%;
+    }
+    .container{
+        position: relative;
+    }
+    .desktopnavbar{
+        display: block;
+        position: fixed;
+    }
+
+}

@@ -1,0 +1,29 @@
+.container{
+    width: 100%;
+}
+.link__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    width: 277px;
+    height: 10vh;
+    margin: auto;
+    text-decoration: none;
+}
+.link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.link__name{
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+    color: #49454F;
+}

@@ -1,0 +1,230 @@
+.container {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+}
+
+.top {
+    height: 10vh;
+    width: 100%;
+}
+
+.data__container {
+    width: 100%;
+    height: 25vh;
+    background-color: white;
+}
+
+.bottom__container {
+    width: 100%;
+    height: 65vh;
+}
+.data__title{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 36px;
+    letter-spacing: 0.4px;
+    color: #171A1F;
+    display: flex;
+    align-items: center;
+}
+.shop__container{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+}
+.shop__left{
+    width: 33.33%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+}
+.shop__center{
+    width: 33.33%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+}
+.shop__right{
+    width: 33.33%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+}
+.shop__title{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0.4px;
+    color: #FFFFFF;
+    text-align: center;
+}
+.hammer__container {
+    height: 40%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 15px;
+    letter-spacing: 0.01em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 24px;
+    color: white;
+}
+
+.hammer__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #000000;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hammer__number {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #000000;
+    color: #FFA629;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+    bottom: -2px;
+    right: -19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wand__container {
+    height: 40%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 15px;
+    letter-spacing: 0.01em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+.left__icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+.coin__img__container {
+    background-color: black;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coin__img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coin__number {
+    width: 40px;
+    height: 40px;
+    background-color: #000000;
+    border-radius: 50%;
+    color: #FFA629;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+    position: absolute;
+    bottom: -2px;
+    right: -30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buy__container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.right__left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.right__right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 30px;
+    margin-top: 10px;
+}
+.plus__icon{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    cursor: pointer;
+}
+.plus__number{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+    color: #FFA629;
+}
+.hammer__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #000000;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.left__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

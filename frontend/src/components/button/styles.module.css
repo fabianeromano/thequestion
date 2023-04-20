@@ -1,0 +1,36 @@
+.container{
+    text-align: center;
+    border-radius: 30px;
+}
+.primary{
+    background: #14AE5C;
+    color: black;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 16px;
+}
+.secondary{
+    background: #FFFFFF;
+    color:black;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 16px;
+}
+.primary__medium{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    flex-grow: 0;
+}
+.primary__bigger{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    flex-grow: 0;
+}

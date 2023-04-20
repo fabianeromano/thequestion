@@ -1,0 +1,58 @@
+.container{
+    background-image: url(./../../assets/tutorial/bg-desktop.svg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+.left__container{
+    grid-area: 1 / 1 / 2 / 2;
+}
+.center__container{
+    grid-area: 1 / 2 / 2 / 3;
+    background-color: red;
+}
+.right__container{
+    grid-area: 1 / 3 / 2 / 4;
+}
+.button__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.button__choose{
+    width: 312px;
+    height: 44px;
+    background: #FFFFFF;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #000000;
+}
+.question{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.023em;
+    color: #FFFFFF;
+    margin-bottom: 60px
+}
+.item__container{
+    width: 65px;
+    height: 65px;
+    padding: 5px;
+}

@@ -36,40 +36,40 @@ function useFetch(url, options, onSuccess, onError) {
 
     const [state, dispatch] = useReducer(fetchReducer, initialState)
 
+    const fetchData = async () => {
+        dispatch({ type: 'loading' })
+
+        if (cache.current[url]) {
+            console.log('cached')
+            dispatch({ type: 'fetched', payload: cache.current[`${url}`] })
+            return
+        }
+
+        try {
+            const response = await axios({
+                url,
+                baseURL: API_URL,
+                method: 'GET',
+                ...defaultOptions,
+                ...options
+            });
+            const data = response.data;
+            cache.current[url] = data
+            if (cancelRequest.current) return
+            if (onSuccess) onSuccess(data);
+            dispatch({ type: 'fetched', payload: data })
+        } catch (error) {
+            if (cancelRequest.current) return
+            if (onError) onError(error);
+            dispatch({ type: 'error', payload: error })
+        }
+    }
+
     useEffect(() => {
         // Do nothing if the url is not given
         if (!url) return
 
         cancelRequest.current = false
-
-        const fetchData = async () => {
-            dispatch({ type: 'loading' })
-
-            if (cache.current[url]) {
-                console.log('cached')
-                dispatch({ type: 'fetched', payload: cache.current[`${url}`] })
-                return
-            }
-
-            try {
-                const response = await axios({
-                    url,
-                    baseURL: API_URL,
-                    method: 'GET',
-                    ...defaultOptions,
-                    ...options
-                });
-                const data = response.data;
-                cache.current[url] = data
-                if (cancelRequest.current) return
-                if (onSuccess) onSuccess(data);
-                dispatch({ type: 'fetched', payload: data })
-            } catch (error) {
-                if (cancelRequest.current) return
-                if (onError) onError(error);
-                dispatch({ type: 'error', payload: error })
-            }
-        }
 
         void fetchData()
 
@@ -78,7 +78,10 @@ function useFetch(url, options, onSuccess, onError) {
         }
     }, [url])
 
-    return state
+    return {
+      ...state,
+      refetch: fetchData
+    }
 }
 
 export default useFetch;

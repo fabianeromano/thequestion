@@ -5,7 +5,7 @@ import axios from "axios";
 import { useSelector } from "react-redux";
 import { toast } from "react-toastify";
 
-const FriendsPending = ({ data }) => {
+const FriendsPending = ({ data, onChangeStatus }) => {
   const token = useSelector(state => state.auth.token);
 
   const toastProperties = {
@@ -37,9 +37,11 @@ const FriendsPending = ({ data }) => {
       .then(res => {
         switch (status) {
           case "accepted":
+            onChangeStatus && onChangeStatus();
             toast.success("¡Amigo aceptado con éxito!", toastProperties);
             break;
           case "refused":
+            onChangeStatus && onChangeStatus();
             toast.success("¡Amigo rechazado con éxito!", toastProperties);
             break;
           default:
